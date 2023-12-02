@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>ESTELAB</title>
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="main__content">
+                <div class="main__open--form remove">Открыть форму</div>
+
+
+                <div class="main__form ">
+
+                    <div class="main__form-exit">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"
+                                fill="none">
+                                <path d="M17.9688 5.03125L5.03125 17.9688" stroke="black" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M17.9688 17.9688L5.03125 5.03125" stroke="black" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <h1 class="main__form-title">Заполните заявку на консультацию</h1>
+                    <p class="main__form-text">Наш специалист свяжется с Вами и ответит на любые вопросы</p>
+
+                    <form action="#" id="form" class="myForm__form">
+                        <fieldset class="myForm__form-fieldset">
+                            <div class="myForm__form-content--top">
+                                <div class="myForm__form-wrap">
+
+                                    <input class="myForm__form-input" type="text" id="name" name="name"
+                                        placeholder="Имя">
+
+                                </div>
+                                <div class="myForm__form-wrap">
+
+                                    <input class="myForm__form-input" type="tel" id="tel" name="tel"
+                                        placeholder="Телефон">
+
+                                </div>
+                            </div>
+                            <div class="myForm__form-textarea margin--top">
+                                <input class="myForm__form-textarea--inner " type="text" id="text" name="text"
+                                    placeholder="Напишите, какой у Вас вопрос?">
+                            </div>
+                        </fieldset>
+
+                        <div class="myForm__form-consultation">
+                            <div class="myForm__consultation-button">
+                                <button type="submit">Получить консультацию</button>
+                            </div>
+                            <h2 class="myForm__consultation-title"> <span>Я соглашаюсь на</span> обработку персональных
+                                данных</h2>
+                        </div>
+                    </form>
+                </div>
+
+                
+                <div class="myForm__success-wrapper ">
+                    <div class="myForm__success-message fade" id="successMessage">
+                        <p>Спасибо! Ваша заявка принята</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script src="./index.js"></script>
+
+</html>

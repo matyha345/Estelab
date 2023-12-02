@@ -1,0 +1,449 @@
+/* * {
+  outline: 1px solid #333;
+} */
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./font/Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"),
+    url("./font/Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./font/Gilroy-Bold.woff") format("woff"),
+    url("./font/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./font/Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"),
+    url("./font/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./font/Gilroy-Regular.woff") format("woff"),
+    url("./font/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ============================= Reset ============================= */
+/* ============================= Reset ============================= */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+input {
+  background: transparent;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  background: transparent;
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+a {
+  color: inherit;
+}
+
+/* ============================= Main ============================= */
+/* ============================= Main ============================= */
+
+:root {
+  --text-gray: #9797af;
+  --text-main: #000;
+  --text-white: #fff;
+
+  --alert: #dff0d8;
+  --alert-border: #3c763d;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-weight: 400;
+  min-width: 375px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Gilroy", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+.main__content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.main__open--form {
+  cursor: pointer;
+  color: #fff;
+  padding: 17px 80px 16px 80px;
+  background-color: var(--text-main);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0.8px;
+  border-radius: 5px;
+}
+.margin--top {
+  margin-top: 20px;
+}
+
+/* ========================================================== */
+/* ========================================================== */
+
+.main__form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 65px 50px 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.main__form-exit span {
+  cursor: pointer;
+  position: absolute;
+  top: -18px;
+  right: -18px;
+
+  width: 36px;
+  height: 36px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.main__form-exit span svg path {
+  stroke: #fff;
+}
+
+.main__form-title {
+  color: var(--text-main);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 106%; /* 44.52px */
+}
+.main__form-text {
+  margin-top: 25px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+}
+.myForm__form {
+  margin-top: 30px;
+}
+.myForm__form-content--top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.myForm__form-fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+.myForm__form-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.myForm__form-wrap:nth-child(2) {
+  margin-left: 15px;
+}
+
+.myForm__form-input {
+  width: 100%;
+  background: #f3f4f5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 5px;
+  padding: 17px 0 16px 15px;
+  border-radius: 5px;
+}
+.myForm__form-textarea {
+  position: relative;
+}
+
+.myForm__form-textarea--inner {
+  width: 100%;
+  background: #f3f4f5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 17px 0 38px 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.myForm__form-input--wrong {
+  border-bottom: 1px solid red;
+  color: red;
+}
+
+.myForm__form-error {
+  position: absolute;
+  right: 0;
+  bottom: -19px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: red;
+  margin-right: 5px;
+}
+
+.myForm__form-input:focus + .myForm__form-label {
+  top: -24px;
+  opacity: 1;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.myForm__form-consultation {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.myForm__form-consultation button {
+  color: #fff;
+  padding: 17px 80px 16px 80px;
+  background-color: var(--text-main);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%; /* 21.6px */
+  letter-spacing: 0.8px;
+  border-radius: 5px;
+}
+
+.myForm__consultation-title {
+  margin-left: 15px;
+  color: #000;
+  font-family: Gilroy;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+
+.myForm__consultation-title span {
+  color: #909090;
+
+  font-family: Gilroy;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%; /* 16.2px */
+  letter-spacing: 0.6px;
+}
+
+.myForm__success-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.myForm__success-message {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  height: 30px;
+  background-color: var(--alert);
+  border: 1px solid var(--alert-border);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.remove {
+  display: none;
+}
+
+@media (max-width: 1399px) {
+  .main__form {
+    max-width: 430px;
+    padding: 30px;
+  }
+
+  .main__form-exit span {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    background-color: transparent;
+  }
+  .main__form-exit span svg path {
+    stroke: black;
+  }
+
+  .main__form-title {
+    font-size: 36px;
+    line-height: 106%; /* 38.16px */
+    max-width: 314px;
+  }
+
+  .main__form-text {
+    max-width: 364px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%; /* 21.6px */
+    letter-spacing: 0.8px;
+  }
+
+  .myForm__form-content--top {
+    flex-direction: column;
+    align-items: start;
+  }
+  .myForm__form-wrap:nth-child(2) {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+  .myForm__form-wrap {
+    width: 100%;
+  }
+
+  .margin--top {
+    margin-top: 15px;
+  }
+  .myForm__form-textarea--inner {
+    padding: 17px 0 16px 15px;
+  }
+  .myForm__form-consultation {
+    flex-direction: column;
+    align-items: normal;
+    margin-top: 25px;
+  }
+  .myForm__form-consultation button {
+    padding: 17px 84px 16px 84px;
+  }
+  .myForm__consultation-title {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 766px) {
+  .container {
+    padding: 0;
+  }
+  .main__content {
+    align-items: end;
+  }
+  .main__form {
+    padding: 20px 15px 30px 15px;
+  }
+  .main__form-exit span {
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+  }
+  .main__form-title {
+    max-width: 221px;
+    font-size: 26px;
+  }
+  .main__form-text {
+    margin-top: 15px;
+    max-width: 344px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%; /* 18.9px */
+    letter-spacing: 0.7px;
+  }
+  .myForm__form {
+    margin-top: 25px;
+  }
+  .myForm__form-consultation button {
+    padding: 17px 74px 16px 74px;
+  }
+  .myForm__consultation-title {
+    display: none;
+  }
+
+  .myForm__success-wrapper {
+    top: 50px;
+  }
+}
