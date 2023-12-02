@@ -128,6 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let textErrorText = "";
     if (!text) {
       textErrorText = "Укажите какой у Вас вопрос?";
+    } else if (text.length < 10) {
+      textErrorText = "Вопрос должен содержать не менее 10 символов";
     }
     return textErrorText;
   };
@@ -148,8 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   changePlaceholderWidth();
 
-
-
+ 
   document.getElementById("form").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -157,29 +158,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     massInputs.forEach((input, index) => {
       const value = input.value.trim();
+      let error = "";
+
       switch (index) {
         case 0:
-          manageErrorElement(errorsInName(value), index);
+          error = errorsInName(value);
           break;
         case 1:
-          manageErrorElement(errorsInText(value), index);
+          error = errorsInText(value);
           break;
         case 2:
-          manageErrorElement(errorsInTel(value), index);
+          error = errorsInTel(value);
           break;
       }
-      if (input.parentNode.querySelector(".myForm__form-error")) {
+
+      manageErrorElement(error, index);
+
+      if (error) {
         isValid = false;
       }
     });
 
-    if (
-      !massInputs.some((input) =>
-        input.parentNode.querySelector(".myForm__form-error")
-      )
-    ) {
-      isValid = true;
-    }
+    console.log(isValid);
 
     const successMessage = document.getElementById("successMessage");
 
@@ -206,8 +206,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
-
-    console.log(isValid);
   });
 });
-
